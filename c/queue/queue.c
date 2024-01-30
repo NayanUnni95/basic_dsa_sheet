@@ -19,7 +19,7 @@ int Dequeue(int arr[], int *front, int *rear) {
     if(*front == -1) {
         printf("Queue Under Flow...\n");
     }
-    else {
+    else if(*front > *rear) {
         arr[*front] = 0;
         *front = *front + 1;
     }
@@ -51,7 +51,7 @@ int main(void) {
 /*
 -----output-----
 Enter the value : 1
-Enter the value : 1
+Enter the value : 2
 Queue Over Flow...
-
+1       2
 */
